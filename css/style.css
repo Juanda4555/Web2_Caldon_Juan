@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fuentes/Rubik-Black.ttf);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(/fuentes/UbuntuMono-Bold.ttf);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/fuentes/Roboto-Medium.ttf);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4.5fr 0.2fr .2fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20PX;
+    grid-area: header;
+    /*  */
+    height: 90vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #0071BC 80%, #fff 100%, #fff);
+    padding: 30px;
+    /*  */
+    padding-bottom: 20vh;
+
+    div {
+        width: 30vh;
+        aspect-ratio: 1/1;
+        background-color: #ffffff;
+        border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+h1 {
+    color: white;
+    font-family: 'Rubik';
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+h6 {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+nav {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+
+}
+
+nav ul {
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 2rem;
+    font-family: 'Rubik';
+    font-size: 1.2rem;
+    cursor: pointer;
+    gap: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    width: 100%;
+
+}
+
+aside {
+    grid-area: aside;
+
+}
+
+footer {
+    grid-area: footer;
+    height: 10vh;
+    width: 100%;
+
+    p {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+}
+
+aside ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    padding: 20px;
+
+    li {
+        font-size: 2.5rem;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+#sobre-mi {
+    padding: 20px;
+
+    h2 {
+        font-size: 2rem;
+        margin: 20px;
+    }
+}
+
+#habilidades {
+    padding: 20px;
+
+    h2 {
+        font-size: 2rem;
+        margin: 20px 0;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+}
+
+
+h3 {
+    font-family: 'Ubuntu';
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+p {
+    font-family: 'Roboto';
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.idiomas {
+
+    ul {
+        margin: 20px;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-around;
+
+        li img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+
+        }
+
+        .uk {
+            filter: grayscale(50%);
+        }
+
+        .rusia {
+            filter: grayscale(90%);
+        }
+    }
+}
+
+.lenguajes {
+    ul {
+        margin: 20px;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-around;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        li img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .python,
+        .javascript {
+            filter: grayscale(70%);
+        }
+    }
+}
+
+.frameworks {
+    ul {
+        margin: 20px;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-around;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        li img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .asp {
+            filter: grayscale(30%);
+        }
+
+        .spring {
+            filter: grayscale(30%);
+        }
+    }
+}
+
+#enfoques {
+    padding: 20px;
+
+}
+
+#recursos {
+    padding: 20px;
+}
+
+.presencial {
+    ul {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li img {
+            width: 120px;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+.virtual {
+    ul {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        list-style: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li img {
+            width: 70px;
+            aspect-ratio: 1/1;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    nav ul li{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 420px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 0.2fr .2fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    nav ul {
+        width: 100%;
+        li{
+            font-size: 1.5rem;
+        }
+    }
+
+    .container-main {
+        width: 60vw;
+    }
+
+    .idiomas ul li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .idiomas ul li img:hover,
+    .lenguajes ul li img:hover,
+    .frameworks ul li img:hover {
+        transform: scale(1.5);
+        transition: all 0.2s ease-in-out;
+        filter: grayscale(0%);
+    }
+
+    .lenguajes ul li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .frameworks ul li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    aside {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            width: 50vw;
+            justify-content: space-around;
+        }
+    }
+}
